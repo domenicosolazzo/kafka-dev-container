@@ -6,7 +6,7 @@
 # use the ip assigned to zk above
 ZK_IP=192.168.1.1
 
-KAFKA=$(sudo docker run -d -p 9998 -e HOSTNAME=localhost -e ZK_CONN=$ZK_IP:2181)
+KAFKA=$(sudo docker run -d -p 9998 -e HOSTNAME=localhost -e ZK_CONN=$ZK_IP:2181 sclasen/kafka-dev-container)
 
 # the container runs pipework --wait so it can get its interface configured so it can reach zk
 
