@@ -30,6 +30,10 @@ ADD server.properties /kafka/conf/server.properties
 ADD pipework /pipework
 ADD start-kafka.sh /kafka/bin/start-kafka.sh
 
+RUN mkdir -p /kafka/data
+
+RUN apt-get install  -q -y netcat
+
 EXPOSE 9998 9999 
 CMD ["/kafka/bin/start-kafka.sh"]
 
