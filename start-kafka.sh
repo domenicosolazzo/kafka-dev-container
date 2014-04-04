@@ -8,4 +8,4 @@ echo "broker.id=1" >> /kafka/conf/server.properties
 
 /pipework --wait
 
-/kafka/kafka_2.8.0-0.8.0-beta1/bin/kafka-server-start.sh /kafka/conf/server.properties
+/kafka/kafka_2.9.2-0.8.1/bin/kafka-server-start.sh /kafka/conf/server.properties

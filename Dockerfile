@@ -22,12 +22,11 @@ RUN mkdir -p /kafka/bin
 RUN mkdir -p /kafka/conf
 
 
-ADD kafka_2.8.0-0.8.0-beta1.tgz /kafka/kafka_2.8.0-0.8.0-beta1.tgz
-RUN $(cd /kafka && tar xfz kafka_2.8.0-0.8.0-beta1.tgz)
+ADD http://mirrors.sonic.net/apache/kafka/0.8.1/kafka_2.9.2-0.8.1.tgz /kafka/kafka_2.9.2-0.8.1.tgz
+RUN $(cd /kafka && tar xfz kafka_2.9.2-0.8.1.tgz)
 
 ADD server.properties /kafka/conf/server.properties
 
-ADD pipework /pipework
 ADD start-kafka.sh /kafka/bin/start-kafka.sh
 
 RUN mkdir -p /kafka/data
